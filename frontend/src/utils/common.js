@@ -1,4 +1,4 @@
-export { fetchAPI, checkWebWorker, getWebWorker };
+export { fetchAPI, checkWebWorker };
 
 // Gets location values
 const fetchAPI = (setData) => {
@@ -14,12 +14,4 @@ const checkWebWorker = (key, worker) => {
     return `Did not match web worker (${worker})`;
   }
   return null;
-};
-
-const getWebWorker = () => {
-  let w;
-  if (typeof w === 'undefined') {
-    w = new Worker('worker.js');
-  }
-  return w;
 };

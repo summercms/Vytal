@@ -1,40 +1,40 @@
 import './TableRow.css';
-import Modal from 'react-modal';
-import { useState } from 'react';
+// import Modal from 'react-modal';
+// import { useState } from 'react';
 import { ReactComponent as XCircle } from '../images/xCircle.svg';
 import { ReactComponent as CheckCircle } from '../images/checkCircle.svg';
-import { ReactComponent as X } from '../images/x.svg';
+// import { ReactComponent as X } from '../images/x.svg';
 
-const modalStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    padding: '18px',
-    border: '1px solid var(--border)',
-    borderRadius: '6px',
-  },
-};
+// const modalStyles = {
+//   content: {
+//     top: '50%',
+//     left: '50%',
+//     right: 'auto',
+//     bottom: 'auto',
+//     marginRight: '-50%',
+//     transform: 'translate(-50%, -50%)',
+//     padding: '18px',
+//     border: '1px solid var(--border)',
+//     borderRadius: '6px',
+//   },
+// };
 
-Modal.setAppElement('#root');
+// Modal.setAppElement('#root');
 
 const TableRow = ({ item }) => {
   const issues = item.issues.filter(Boolean).length !== 0;
-  const [modalIsOpen, setIsOpen] = useState(false);
+  // const [modalIsOpen, setIsOpen] = useState(false);
 
-  const openModal = () => {
-    if (issues) setIsOpen(true);
-  };
+  // const openModal = () => {
+  //   if (issues) setIsOpen(true);
+  // };
 
-  const closeModal = () => {
-    setIsOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsOpen(false);
+  // };
   return (
     <>
-      <tr className={issues ? 'issue' : ''} onClick={openModal}>
+      <tr className={issues ? 'issue' : ''}>
         <td>{item.key}</td>
         <td>{item.value || 'N/A'}</td>
         <td>
@@ -45,7 +45,7 @@ const TableRow = ({ item }) => {
           )}
         </td>
       </tr>
-      <Modal
+      {/* <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={modalStyles}
@@ -60,7 +60,7 @@ const TableRow = ({ item }) => {
             <li key={index}>{ele}</li>
           ))}
         </ul>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

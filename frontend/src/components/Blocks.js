@@ -3,7 +3,9 @@ import DataContext from './Context';
 import BlocksOne from './BlocksOne';
 import BlocksTwo from './BlocksTwo';
 // import FontsBlock from './FontsBlock';
-import { fetchAPI, getWebWorker } from '../utils/common';
+import { fetchAPI } from '../utils/common';
+import worker from './worker';
+import WebWorker from './workerSetup';
 import './Blocks.css';
 
 const Blocks = () => {
@@ -11,7 +13,8 @@ const Blocks = () => {
   const [connectionData, setConnectionData] = useState('');
 
   useEffect(() => {
-    getWebWorker().onmessage = (event) => {
+    const w = new WebWorker(worker);
+    w.onmessage = (event) => {
       setWorkerData(event.data);
       fetchAPI(setConnectionData);
     };
