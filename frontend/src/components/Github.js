@@ -1,16 +1,19 @@
 import './GitHub.css';
-import GitHubButton from 'react-github-btn';
+import { ReactComponent as GithubImg } from '../images/github.svg';
 
 const Github = () => (
-  <div className="gitHubButton">
-    <GitHubButton
-      href="https://github.com/z0ccc/Vytal"
-      data-color-scheme="no-preference: light; light: light; dark: light;"
-      aria-label="Star z0ccc/Vytal on GitHub"
-    >
-      Star
-    </GitHubButton>
-  </div>
+  <>
+    <div className="gitHubButton">
+      <a
+        className="githubBtn"
+        href="https://github.com/z0ccc/Vytal"
+        aria-label="Star z0ccc/Vytal on GitHub"
+      >
+        <GithubImg className="githubImg" />
+        GitHub
+      </a>
+    </div>
+  </>
 );
 
 export default Github;

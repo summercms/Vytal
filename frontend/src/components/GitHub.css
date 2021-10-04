@@ -4,6 +4,41 @@
   right: 12px;
 }
 
+.githubBtn {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  display: inline-flex;
+  height: 14px;
+  padding: 2px 5px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  vertical-align: bottom;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-repeat: repeat-x;
+  background-position: -1px -1px;
+  background-size: 110% 110%;
+  border: 1px solid;
+  color: #24292f;
+  background-color: #ebf0f4;
+  border-color: #ccd1d5;
+  border-color: rgba(27, 31, 36, 0.15);
+  border-radius: 0.25em;
+}
+
+.githubBtn:hover {
+  opacity: 0.8;
+}
+
+.githubImg {
+  margin: 0 3px 0 0;
+}
+
 @media screen and (max-width: 900px) {
   .gitHubButton {
     position: absolute;
@@ -12,7 +47,7 @@
 
 @media screen and (max-width: 500px) {
   .gitHubButton {
-    top: 8px;
-    right: 8px;
+    top: 6px;
+    right: 6px;
   }
 }
