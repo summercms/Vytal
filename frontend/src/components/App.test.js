@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { render } from '@testing-library/react';
-import App from './components/App';
+import App from './App';
 
-jest.mock('./components/workerSetup.js');
+jest.mock('./workerSetup.js');
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
